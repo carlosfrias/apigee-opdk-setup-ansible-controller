@@ -6,8 +6,9 @@ This role will setup an Ansible controller with common structure.
 Requirements
 ------------
 
-This role uses properties to generate a basic ansible.cfg. The remote user must be provided.  
-Templates for credentials.yml and customer-properties.yml are provided as a starting
+* This role uses properties to generate a basic ansible.cfg. 
+* The remote user must be provided.  
+* Templates for credentials.yml and customer-properties.yml are provided as a starting
 point. 
 
 Role Variables
