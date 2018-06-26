@@ -1,38 +1,54 @@
-Role Name
+Apigee OPDK Setup Ansible Controller
 =========
 
-A brief description of the role goes here.
+This role will setup an Ansible controller to common structure. 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role uses properties to generate a basic ansible.cfg. The remote user must be provided.  
+Templates for credentials.yml and customer-properties.yml are provided as a starting
+point. 
 
 Role Variables
 --------------
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
+| Variable | Description |
+| --- | --- |
+| ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to the current playbook directory. |
+| apigee_config_folder | This variable indicates the path to the apigee configuration files. This variable default to the current playbook directory. |
+| remote_user | This variable indicates the remote user that Ansible will be configured to use in the ansible.cfg. There is no default possible.  | 
+
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+NA
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+This is an example of how to invoke this role: 
 
-    - hosts: servers
+    - name: Setup the controller workspace
+      hosts: localhost
+      connection: local
+      gather_facts: no
+    
+      vars:
+        remote_user: friasc
+    
       roles:
-         - { role: username.rolename, x: 42 }
+      - { role: apigee-opdk-setup-ansible }
 
 License
 -------
 
-BSD
+Apache 2.0
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Carlos Frias
+
