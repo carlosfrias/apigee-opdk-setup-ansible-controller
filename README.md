@@ -1,7 +1,7 @@
 Apigee OPDK Setup Ansible Controller
 =========
 
-This role will setup an Ansible controller to common structure. 
+This role will setup an Ansible controller with common structure. 
 
 Requirements
 ------------
