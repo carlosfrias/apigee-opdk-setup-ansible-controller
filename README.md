@@ -8,8 +8,8 @@ Requirements
 
 * This role uses properties to generate a basic ansible.cfg; defaults are provided. 
 * The `remote_user` variable must be provided.  
-* Templates for credentials.yml and customer-properties.yml are provided as a starting
-point. 
+* Templates for credentials.yml and customer-properties.yml are provided as a starting point. 
+* git and rsync must be installed.
 
 Role Variables
 --------------
