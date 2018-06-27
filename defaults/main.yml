@@ -12,7 +12,7 @@ setup_dirs:
 - "{{ target_ansible_workspace }}/tmp"
 - "{{ target_ansible_workspace }}/configurations"
 
-target_apigee_workspace: "{{ apigee_workspace | default(~/apigee-workspace) }}"
+target_apigee_workspace: "{{ apigee_workspace | default('~/apigee-workspace') }}"
 starter_templates:
 - { dest_path: "{{ target_apigee_workspace }}/apigee-secure", file_name: credentials.yml }
 - { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: custom-properties.yml }
