@@ -28,6 +28,7 @@ A description of the settable variables for this role should go here, including 
 | starter_templates | This collections provides the list of template files that will be placed under the `apigee_config_folder` |
 | inventory_folder | This variables indicates the location of the inventory folder. |
 | library_dir | This variable contains the location of the Ansible library folder. |
+| pip_index_url | This variable contains the url to the PIP server that PIP should used. A `pip.conf` file will be generated if this is provided, otherwise no file will be generated|
 
 Dependencies
 ------------
