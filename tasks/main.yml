@@ -56,7 +56,7 @@
   tags: ['config']
   template:
     src: ansible.cfg.j2
-    dest: ansible.cfg
+    dest: "{{ ansible_config }}"
     backup: yes
     force: yes
 
