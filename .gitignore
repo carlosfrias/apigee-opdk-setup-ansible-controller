@@ -1,6 +1,6 @@
 *.iml
 *.retry
 apigee
-apigee-secure `
+apigee-secure
 inventory
-ansible
+ansible*
