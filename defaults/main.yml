@@ -5,12 +5,15 @@ ansible_config: "~/apigee-workspace/ansible.cfg"
 target_ansible_workspace: "{{ ansible_workspace | default(local_workspace) }}"
 inventory_folder: "{{ target_ansible_workspace }}/inventory"
 library_dir: "{{ target_ansible_workspace }}/library"
+configuration_templates_dir: "{{ target_ansible_workspace }}/configuration-templates"
 setup_dirs:
 - "{{ library_dir }}"
+- "{{ configuation_templates_dir }}"
 - "{{ target_ansible_workspace }}/roles"
 - "{{ target_ansible_workspace }}/logs"
 - "{{ target_ansible_workspace }}/tmp"
 - "{{ target_ansible_workspace }}/configurations"
+- "{{ target_ansible_workspace }}/playbooks"
 
 target_apigee_workspace: "{{ apigee_workspace | default('~/apigee-workspace') }}"
 starter_templates:
@@ -21,3 +24,10 @@ pip_config:
 - { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: pip.conf }
 
 private_key_file: ~/.ssh/id_rsa
+
+repository_secure_endpoint_https: "https://github.com/carlosfrias"
+repository_secure_endpoint_ssh: "git@github.com:carlosfrias"
+checkout_type: https
+config_repos:
+- { workspace: '{{ configuation_templates_dir }}', repo_name: apigee-opdk-ansible-configuration-samples }
+- { workspace: '{{ configuation_templates_dir }}', repo_name: apigee-opdk-ansible-inventory-samples }

@@ -93,4 +93,25 @@
   - { key: 'target_apigee_workspace', value: '{{ target_apigee_workspace }}' }
   - { key: 'inventory_folder', value: '{{ inventory_folder }}' }
 
+- name: Git SSH checkout of configuration repositories
+  tags: ['config']
+  become: false
+  git:
+    repo: '{{ repository_secure_endpoint_ssh }}/{{ item.repo_name }}.git'
+    dest: "{{ item.workspace }}/{{ item.repo_name }}"
+    accept_hostkey: yes
+  with_items: "{{ config_repos }}"
+  when: checkout_type | trim == 'ssh'
+
+- name: Git HTTPS checkout of configuration repositories
+  tags: ['config']
+  become: false
+  git:
+    repo: '{{ repository_secure_endpoint_https }}/{{ item.repo_name }}.git'
+    dest: "{{ item.workspace }}/{{ item.repo_name }}"
+    accept_hostkey: yes
+  with_items: "{{ config_repos }}"
+  when: checkout_type | trim == 'https'
+
+
 
