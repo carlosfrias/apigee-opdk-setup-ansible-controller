@@ -28,6 +28,6 @@ private_key_file: ~/.ssh/id_rsa
 repository_secure_endpoint_https: "https://github.com/carlosfrias"
 repository_secure_endpoint_ssh: "git@github.com:carlosfrias"
 checkout_type: https
-config_repos:
-- { workspace: '{{ configurations_dir }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
-- { workspace: '{{ inventory_dir }}', repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }
+template_repos:
+- { dir: '{{ configurations_dir }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
+- { dir: '{{ inventory_dir }}', repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }
