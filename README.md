@@ -1,7 +1,30 @@
 Apigee OPDK Setup Ansible Controller
 =========
 
-This role will setup an Ansible controller with common structure. 
+This role will setup an Ansible controller with common structure. The default location for this is 
+indicated by `ansible_workspace` and `apigee_workspace`. `ansible_workspace` and `apigee_workspace`
+default to `~/apigee-workspace` as indicated in the Role Variables below. This role will produce the
+following structure: 
+
+    apigee-workspace/
+        ├── ansible.cfg
+        ├── apigee
+        │   └── custom-properties.yml
+        ├── apigee-secure
+        │   └── credentials.yml
+        ├── configurations
+        │   ├── aio.cfg
+        │   └── templates
+        ├── inventory
+        │   ├── aio
+        │   └── templates
+        ├── library
+        │   └── library
+        ├── logs
+        ├── playbooks
+        ├── roles
+        └── tmp
+
 
 Requirements
 ------------
@@ -18,9 +41,9 @@ A description of the variables for this role can be found below:
 
 | Variable | Description |
 | --- | --- |
-| remote_user | This variable indicates the remote user that Ansible will be configured to use in the ansible.cfg. There is no default possible.  | 
-| ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to the current playbook directory. |
-| apigee_workspace | This variable indicates the path to the apigee configuration files. This variable default to the current playbook directory. |
+| remote_user | This variable indicates the remote user that Ansible will be configured to use in the ansible.cfg. There is no default possible for the `remote_user`.  | 
+| ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to `~/apigee-workspace`. |
+| apigee_workspace | This variable indicates the path to the apigee configuration files. The variable defaults to '~/apigee-workspace`. |
 | ansible_config | This variable indicates the location of the generated ansible.cfg |
 | local_workspace | This variable populates the default value if `ansible_workspace` is not provided |
 | setup_dirs | This collection provides the standard list of folders created in the `ansible_workspace` |
