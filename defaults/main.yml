@@ -8,7 +8,7 @@ library_dir: "{{ target_ansible_workspace }}/library"
 configuration_templates_dir: "{{ target_ansible_workspace }}/configuration-templates"
 setup_dirs:
 - "{{ library_dir }}"
-- "{{ configuation_templates_dir }}"
+- "{{ configuration_templates_dir }}"
 - "{{ target_ansible_workspace }}/roles"
 - "{{ target_ansible_workspace }}/logs"
 - "{{ target_ansible_workspace }}/tmp"
