@@ -1,9 +1,9 @@
 ---
 # defaults file for apigee-opdk-setup-ansible
-ansible_config: "{{ playbook_dir }}/ansible.cfg"
-local_workspace: "{{ playbook_dir }}/ansible"
+local_workspace: "~/apigee-workspace/ansible"
+ansible_config: "~/apigee-workspace/ansible.cfg"
 target_ansible_workspace: "{{ ansible_workspace | default(local_workspace) }}"
-inventory_folder: "{{ playbook_dir }}/inventory"
+inventory_folder: "{{ target_ansible_workspace }}/inventory"
 library_dir: "{{ target_ansible_workspace }}/library"
 setup_dirs:
 - "{{ library_dir }}"
@@ -12,12 +12,12 @@ setup_dirs:
 - "{{ target_ansible_workspace }}/tmp"
 - "{{ target_ansible_workspace }}/configurations"
 
-target_apigee_config_folder: "{{ apigee_config_folder | default(playbook_dir) }}"
+target_apigee_workspace: "{{ apigee_workspace | default(~/apigee-workspace) }}"
 starter_templates:
-- { dest_path: "{{ target_apigee_config_folder }}/apigee-secure", file_name: credentials.yml }
-- { dest_path: "{{ target_apigee_config_folder }}/apigee", file_name: custom-properties.yml }
+- { dest_path: "{{ target_apigee_workspace }}/apigee-secure", file_name: credentials.yml }
+- { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: custom-properties.yml }
 
 pip_config:
-- { dest_path: "{{ target_apigee_config_folder }}/apigee", file_name: pip.conf }
+- { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: pip.conf }
 
 private_key_file: ~/.ssh/id_rsa

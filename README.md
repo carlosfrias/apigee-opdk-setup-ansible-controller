@@ -20,7 +20,7 @@ A description of the variables for this role can be found below:
 | --- | --- |
 | remote_user | This variable indicates the remote user that Ansible will be configured to use in the ansible.cfg. There is no default possible.  | 
 | ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to the current playbook directory. |
-| apigee_config_folder | This variable indicates the path to the apigee configuration files. This variable default to the current playbook directory. |
+| apigee_workspace | This variable indicates the path to the apigee configuration files. This variable default to the current playbook directory. |
 | ansible_config | This variable indicates the location of the generated ansible.cfg |
 | local_workspace | This variable populates the default value if `ansible_workspace` is not provided |
 | setup_dirs | This collection provides the standard list of folders created in the `ansible_workspace` |
