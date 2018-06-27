@@ -11,7 +11,7 @@ setup_dirs:
 - "{{ target_ansible_workspace }}/roles"
 - "{{ target_ansible_workspace }}/logs"
 - "{{ target_ansible_workspace }}/tmp"
-- "{{ target_ansible_workspace }}/playbooks"
+- "{{ target_apigee_workspace }}/playbooks"
 - "{{ target_ansible_workspace }}/inventory"
 
 target_apigee_workspace: "{{ apigee_workspace | default('~/apigee-workspace') }}"

@@ -7,6 +7,19 @@ the default path is `~/apigee-workspace` as indicated in the Role Variables belo
 structure will be produced: 
 
     apigee-workspace/
+        ├── ansible                               
+        │   ├── inventory
+        │   │   ├── aio
+        │   │   └── templates     
+        │   ├── library            
+        │   │   ├── cache.py             
+        │   │   └── opdk_server_self.py
+        │   ├── logs                    
+        │   ├── multi-planet-configurations               
+        │   │   ├── aio.cfg
+        │   │   └── templates                
+        │   ├── roles        
+        │   └── tmp  
         ├── ansible.cfg
         ├── apigee
         │   └── custom-properties.yml
@@ -15,19 +28,7 @@ structure will be produced:
         ├── apigee-secure
         │   └── credentials.yml
         │   └── license.txt
-        ├── multi-planet-configurations
-        │   ├── aio.cfg
-        │   └── templates
-        ├── inventory
-        │   ├── aio
-        │   └── templates
-        ├── library
-        │   └── cache.py
-        │   └── opdk_server_self.py
-        ├── logs
-        ├── playbooks
-        ├── roles
-        └── tmp
+        └── playbooks
 
 | Folder | Description | Usage |
 | --- | --- | --- |
