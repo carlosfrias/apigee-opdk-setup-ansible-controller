@@ -73,3 +73,15 @@
     that:
     - inventory_state.stat.exists
     msg: "Please create an inventory folder and place your inventory definitions there"
+
+- name: Update Ansible cache
+  tags: ['cache']
+  cache:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+  - { key: 'target_ansible_workspace', value: '{{ target_ansible_workspace }}' }
+  - { key: 'target_apigee_config_workspace', value: '{{ target_apigee_config_workspace }}' }
+  - { key: 'inventory_folder', value: '{{ inventory_folder }}' }
+
+
