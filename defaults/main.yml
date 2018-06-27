@@ -20,3 +20,4 @@ starter_templates:
 pip_config:
 - { dest_path: "{{ target_apigee_config_folder }}/apigee", file_name: pip.conf }
 
+private_key_file: ~/.ssh/id_rsa

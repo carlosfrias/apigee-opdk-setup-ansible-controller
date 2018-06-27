@@ -28,7 +28,8 @@ A description of the variables for this role can be found below:
 | starter_templates | This collections provides the list of template files that will be placed under the `apigee_config_folder` |
 | inventory_folder | This variables indicates the location of the inventory folder. |
 | library_dir | This variable contains the location of the Ansible library folder. |
-| pip_index_url | This variable contains the url to the PIP server that PIP should used. A `pip.conf` file will be generated if this is provided, otherwise no file will be generated|
+| pip_index_url | This variable contains the url to the PIP server that PIP should used. A `pip.conf` file will be generated if this is provided, otherwise no file will be generated |
+| private_key_file | This variable contains the path to the SSH private key Ansible will use to connect |
 
 Dependencies
 ------------
