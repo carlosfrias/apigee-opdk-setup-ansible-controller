@@ -98,7 +98,7 @@
   become: false
   git:
     repo: '{{ repository_secure_endpoint_ssh }}/{{ item.repo_name }}.git'
-    dest: "{{ item.workspace }}/{{ item.repo_name }}"
+    dest: "{{ item.workspace }}/{{ item.dest_name }}"
     accept_hostkey: yes
   with_items: "{{ config_repos }}"
   when: checkout_type | trim == 'ssh'
@@ -108,7 +108,7 @@
   become: false
   git:
     repo: '{{ repository_secure_endpoint_https }}/{{ item.repo_name }}.git'
-    dest: "{{ item.workspace }}/{{ item.repo_name }}"
+    dest: "{{ item.workspace }}/{{ item.dest_name }}"
     accept_hostkey: yes
   with_items: "{{ config_repos }}"
   when: checkout_type | trim == 'https'
