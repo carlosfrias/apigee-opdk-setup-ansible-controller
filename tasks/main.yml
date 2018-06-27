@@ -92,6 +92,7 @@
   - { key: 'target_ansible_workspace', value: '{{ target_ansible_workspace }}' }
   - { key: 'target_apigee_workspace', value: '{{ target_apigee_workspace }}' }
   - { key: 'inventory_dir', value: '{{ inventory_dir }}' }
+  - { key: 'configurations_dir', value: '{{ configurations_dir }}' }
 
 - name: Git SSH checkout of configuration repositories
   tags: ['config']
