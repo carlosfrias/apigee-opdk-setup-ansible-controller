@@ -27,10 +27,7 @@ structure will be produced:
 
 | Folder | Description | Usage |
 | --- | --- | --- |
-| apigee | This location has been set aside as storage for information and content that is not sensitive. | 
-You can place `custom-properties.yml` settings that affect an installation here. Addtional items 
-that can be stored here include the tarball for the Apigee Mirror or RPM that need to be manually 
-installed.|
+| apigee | This location has been set aside as storage for information and content that is not sensitive. | You can place `custom-properties.yml` settings that affect an installation here. Addtional items that can be stored here include the tarball for the Apigee Mirror or RPM that need to be manually installed.|
 
  
 ##  Folder: apigee-secure
