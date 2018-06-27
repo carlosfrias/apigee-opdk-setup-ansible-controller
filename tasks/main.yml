@@ -30,7 +30,7 @@
     state: directory
   with_items:
   - "{{ setup_dirs }}"
-  - "{{ inventory_folder }}"
+  - "{{ inventory_dir }}"
 
 - name: Update Library
   synchronize:
@@ -74,7 +74,7 @@
 
 - name: Determine that state of inventory folder
   stat:
-    path: "{{ inventory_folder }}"
+    path: "{{ inventory_dir }}"
   register: inventory_state
 
 - name: Assert that inventory folder exists
@@ -91,7 +91,7 @@
   with_items:
   - { key: 'target_ansible_workspace', value: '{{ target_ansible_workspace }}' }
   - { key: 'target_apigee_workspace', value: '{{ target_apigee_workspace }}' }
-  - { key: 'inventory_folder', value: '{{ inventory_folder }}' }
+  - { key: 'inventory_dir', value: '{{ inventory_dir }}' }
 
 - name: Git SSH checkout of configuration repositories
   tags: ['config']
