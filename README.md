@@ -1,10 +1,10 @@
 Apigee OPDK Setup Ansible Controller
 =========
 
-This role will setup an Ansible controller with common structure. The default location for this is 
-indicated by `ansible_workspace` and `apigee_workspace`. `ansible_workspace` and `apigee_workspace`
-default to `~/apigee-workspace` as indicated in the Role Variables below. This role will produce the
-following structure: 
+This role will setup an Ansible controller with a common directory structure. The structure will
+produced at the path indicated by `ansible_workspace` and `apigee_workspace`. Plaase note that
+the default path is `~/apigee-workspace` as indicated in the Role Variables below. The following 
+structure will be produced: 
 
     apigee-workspace/
         ├── ansible.cfg
@@ -25,6 +25,29 @@ following structure:
         ├── roles
         └── tmp
 
+| Folder | Description | Usage |
+| --- | --- | --- |
+| apigee | This location has been set aside as storage for information and content that is not sensitive. | 
+You can place `custom-properties.yml` settings that affect an installation here. Addtional items 
+that can be stored here include the tarball for the Apigee Mirror or RPM that need to be manually 
+installed.|
+
+ 
+##  Folder: apigee-secure
+
+This location has been set aside as storage for sensitive information. 
+
+### Usage of Folder: apigee-secure 
+Credentials and the license material should be stored here. License material should be stored in a 
+file named `license.txt`. 
+
+### Usage of Folder: configurations
+
+This location has been set aside as storage for Ansible configuration files. This is very useful when
+you need to manage multiple planets such as when a customer environment is composed of individual 
+planets for dev, test, uat, perf, staging and prod.
+
+Folder 
 
 Requirements
 ------------
