@@ -29,7 +29,13 @@ A description of the variables for this role can be found below:
 | inventory_folder | This variables indicates the location of the inventory folder. |
 | library_dir | This variable contains the location of the Ansible library folder. |
 | pip_index_url | This variable contains the url to the PIP server that PIP should used. A `pip.conf` file will be generated if this is provided, otherwise no file will be generated |
+| pip_config | This variable contains the final name of the pip file and the location. |
 | private_key_file | This variable contains the path to the SSH private key Ansible will use to connect |
+| repository_secure_endpoint_https | This variable contains the URL to the git https repository endpoint. |
+| repository_secure_endpoint_ssh | This variable contains the URL to the git ssh repository endpoint. |
+| checkout_type | This is used to select which repository endpoint should be used during a checkout. Possible values are 'https' or 'ssh'. The default value is 'https' |
+| template_repos | This collection contains a listing of the github repos to checkout. The structure of each element is: `- { dir: "{{ target_ansible_workspace }}/inventory", repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }` |
+ 
 
 Dependencies
 ------------
