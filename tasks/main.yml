@@ -23,6 +23,11 @@
   - "{{ setup_dirs }}"
   - "{{ inventory_folder }}"
 
+- name: Update Library
+  synchronize:
+    src: library
+    dest: "{{ library_dir }}"
+
 - name: Check for remote user name
   tags: ['config']
   assert:

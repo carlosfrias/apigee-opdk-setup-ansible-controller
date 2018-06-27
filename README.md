@@ -27,6 +27,7 @@ A description of the settable variables for this role should go here, including 
 | target_apigee_config_folder | This variable populates the default value if the `apigee_config_folder` is not provided. |
 | starter_templates | This collections provides the list of template files that will be placed under the `apigee_config_folder` |
 | inventory_folder | This variables indicates the location of the inventory folder. |
+| library_dir | This variable contains the location of the Ansible library folder. |
 
 Dependencies
 ------------
