@@ -90,7 +90,7 @@
     value: "{{ item.value }}"
   with_items:
   - { key: 'target_ansible_workspace', value: '{{ target_ansible_workspace }}' }
-  - { key: 'target_apigee_config_folder', value: '{{ target_apigee_config_folder }}' }
+  - { key: 'target_apigee_workspace', value: '{{ target_apigee_workspace }}' }
   - { key: 'inventory_folder', value: '{{ inventory_folder }}' }
 
 
