@@ -28,6 +28,14 @@
     src: library
     dest: "{{ library_dir }}"
 
+- name: Update pip.conf
+  tags: ['pip']
+  template:
+    src: "{{ item.file_name }}.j2"
+    dest: "{{ item.dest_path }}/{{ item.file_name }}"
+  with_items: "{{ pip_conf }}"
+  when: pip_index_url is defined
+
 - name: Check for remote user name
   tags: ['config']
   assert:

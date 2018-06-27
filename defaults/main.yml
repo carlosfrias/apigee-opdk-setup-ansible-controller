@@ -15,4 +15,7 @@ starter_templates:
 - { dest_path: "{{ target_apigee_config_folder }}/apigee-secure", file_name: credentials.yml }
 - { dest_path: "{{ target_apigee_config_folder }}/apigee", file_name: custom-properties.yml }
 
+pip_config:
+- { dest_path: "{{ target_apigee_config_folder }}/apigee", file_name: pip.conf }
+
 inventory_folder: "{{ playbook_dir }}/inventory"
