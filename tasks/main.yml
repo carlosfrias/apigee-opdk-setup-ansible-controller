@@ -1,5 +1,14 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
+- name: Install system packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - git
+  - tree
+  - ansible
+
 - name: Clean all folders
   tags: ['clean']
   file:
