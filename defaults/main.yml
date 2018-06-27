@@ -1,7 +1,6 @@
 ---
 # defaults file for apigee-opdk-setup-ansible
 ansible_config: "{{ playbook_dir }}/ansible.cfg"
-setup_resources: "{{ playbook_dir }}/setup-resources"
 local_workspace: "{{ playbook_dir }}/ansible"
 target_ansible_workspace: "{{ ansible_workspace | default(local_workspace) }}"
 setup_dirs:
