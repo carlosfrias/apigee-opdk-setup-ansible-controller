@@ -10,16 +10,20 @@ structure will be produced:
         ├── ansible.cfg
         ├── apigee
         │   └── custom-properties.yml
+        │   └── apigee-edge-mirror-4.18.05.tar
+        │   └── qpid-proton-c-devel.x86_64.noarch.rpm
         ├── apigee-secure
         │   └── credentials.yml
-        ├── configurations
+        │   └── license.txt
+        ├── multi-planet-configurations
         │   ├── aio.cfg
         │   └── templates
         ├── inventory
         │   ├── aio
         │   └── templates
         ├── library
-        │   └── library
+        │   └── cache.py
+        │   └── opdk_server_self.py
         ├── logs
         ├── playbooks
         ├── roles
@@ -28,23 +32,18 @@ structure will be produced:
 | Folder | Description | Usage |
 | --- | --- | --- |
 | apigee | This location has been set aside as storage for information and content that is not sensitive. | You can place `custom-properties.yml` settings that affect an installation here. Addtional items that can be stored here include the tarball for the Apigee Mirror or RPM that need to be manually installed.|
-
- 
-##  Folder: apigee-secure
-
-This location has been set aside as storage for sensitive information. 
-
-### Usage of Folder: apigee-secure 
-Credentials and the license material should be stored here. License material should be stored in a 
-file named `license.txt`. 
-
-### Usage of Folder: configurations
-
-This location has been set aside as storage for Ansible configuration files. This is very useful when
-you need to manage multiple planets such as when a customer environment is composed of individual 
-planets for dev, test, uat, perf, staging and prod.
-
-Folder 
+| apigee-secure | This location has been set aside as storage for sensitive information. | Credentials and the license material should be stored here. License material should be stored in a file named `license.txt`. |
+| multi-planet-configurations | This location has been set aside as storage for Ansible configuration files when you need to manage multiple planet configurations. | This is very useful when you need to manage multiple planets such as when a customer environment is composed of individual planets for dev, test, uat, perf, staging and prod. You would match an Ansible configuration file `inventory` path attribute to a single sub-folder of the `inventory` folder. |
+| multi-planet-configurations/aio.cfg | This is an Ansible configuration to configure a planet consisting of a single aio instance. | This Ansible configuration contains the `inventory` attribute set to the folder `inventory/aio`. |
+| multi-planet-configurations/template | This location contains sample configurations file that you can use as templates. |  Select a file and copy it to the configurations folder. Update the attributes as indicated |
+| inventory | This location contains inventory folders that contain Ansible inventory files or scripts | The directory can be used for multi-planet-configurations by setting the Ansible configuration `inventory` attribute to the matching inventory folder here. |
+| inventory/aio | This location is an inventory folders for a planet consisting of a single aio node. | Ansible inventory files included in this folder will be read and resolved in memory by Ansible at runtime. |
+| inventory/templates | This location contains template inventory folders that help you understand how to structure your inventory files. | The inventory templates conform to Apigee's perspective of roles by using Ansible's ability to easily define inventory groups. |
+| library | This location contains Python code modules used throughout the Apigee OPDK setup | Purpose built modules that simplify playbooks. |
+| logs | This location contains logs | The output of Ansible commands are written to the logs. The output in the logs reflect the verbosity level used to run the commands. |
+| playbooks | This location has been set aside as storage for the Apigee OPDK framework playbooks. | Many playbooks are available but not all are needed. You can download what you need and keep it here. |
+| roles | This is the location that will contain the Ansible roles used during the execution of the Apigee OPDK framework playbooks. | This folder is populated with roles when you use `ansible-galaxy install` to enable a playbook. |
+| tmp | This is the location that will contain Ansible temporary files and cache entries. | The Ansible cache is used extensively. The cache is found here. The Ansible cache is configured to write attributes in JSON format. This makes it easy to find and modify if needed. |
 
 Requirements
 ------------
