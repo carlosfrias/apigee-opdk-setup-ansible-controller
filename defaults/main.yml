@@ -3,17 +3,17 @@
 local_workspace: "~/apigee-workspace/ansible"
 ansible_config: "~/apigee-workspace/ansible.cfg"
 target_ansible_workspace: "{{ ansible_workspace | default(local_workspace) }}"
-inventory_dir: "{{ target_ansible_workspace }}/inventory"
-library_dir: "{{ target_ansible_workspace }}/library"
-configurations_dir: "{{ target_ansible_workspace }}/configurations"
+#inventory_folder: "{{ target_ansible_workspace }}/inventory"
+library_folder: "{{ target_ansible_workspace }}/library"
+configurations_folder: "{{ target_ansible_workspace }}/configurations"
 setup_dirs:
-- "{{ library_dir }}"
-- "{{ configurations_dir }}"
-- "{{ inventory_dir }}"
+- "{{ library_folder }}"
+- "{{ configurations_folder }}"
 - "{{ target_ansible_workspace }}/roles"
 - "{{ target_ansible_workspace }}/logs"
 - "{{ target_ansible_workspace }}/tmp"
 - "{{ target_ansible_workspace }}/playbooks"
+- "{{ target_ansible_workspace }}/inventory"
 
 target_apigee_workspace: "{{ apigee_workspace | default('~/apigee-workspace') }}"
 starter_templates:
@@ -29,5 +29,5 @@ repository_secure_endpoint_https: "https://github.com/carlosfrias"
 repository_secure_endpoint_ssh: "git@github.com:carlosfrias"
 checkout_type: https
 template_repos:
-- { dir: '{{ configurations_dir }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
-- { dir: '{{ inventory_dir }}', repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }
+- { dir: '{{ configurations_folder }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
+- { dir: "{{ target_ansible_workspace }}/inventory", repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }

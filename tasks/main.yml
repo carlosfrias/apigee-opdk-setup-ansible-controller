@@ -34,7 +34,7 @@
 - name: Update Library
   synchronize:
     src: library
-    dest: "{{ library_dir }}"
+    dest: "{{ library_folder }}"
 
 - name: Update pip.conf
   tags: ['pip']
