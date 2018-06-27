@@ -29,5 +29,5 @@ repository_secure_endpoint_https: "https://github.com/carlosfrias"
 repository_secure_endpoint_ssh: "git@github.com:carlosfrias"
 checkout_type: https
 config_repos:
-- { workspace: '{{ configuation_templates_dir }}', repo_name: apigee-opdk-ansible-configuration-samples }
-- { workspace: '{{ configuation_templates_dir }}', repo_name: apigee-opdk-ansible-inventory-samples }
+- { workspace: '{{ configuration_templates_dir }}', repo_name: apigee-opdk-ansible-configuration-samples }
+- { workspace: '{{ configuration_templates_dir }}', repo_name: apigee-opdk-ansible-inventory-samples }
