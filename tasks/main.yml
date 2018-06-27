@@ -52,7 +52,7 @@
       - remote_user is defined
     msg: "Please provide the remote user name: -e remote_user=<remote username>"
 
-- name: create ansible.cfg file from template
+- name: Update ansible.cfg file
   tags: ['config']
   template:
     src: ansible.cfg.j2
