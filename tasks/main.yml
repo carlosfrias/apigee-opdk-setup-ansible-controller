@@ -1,6 +1,7 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
 - name: Install system packages
+  tags: ['os']
   yum:
     name: "{{ item }}"
     state: present
