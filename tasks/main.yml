@@ -109,9 +109,13 @@
   with_items: "{{ template_repos }}"
   when: checkout_type | trim == 'https'
 
+- name: Set current playbook folder
+  set_facts:
+     playbook_folder: "{{ playbook_dir }}/.."
+
 - name: Copy current folder into playbooks folder
   synchronize:
-    src: "{{ playbook_dir }}/.."
-    dest: "{{ target_apigee_workspace }}/playbooks"
+    src: "{{ playbook_folder }}"
+    dest: "{{ target_apigee_workspace }}/playbooks/{{ playbook_dir | basename }}"
 
 
