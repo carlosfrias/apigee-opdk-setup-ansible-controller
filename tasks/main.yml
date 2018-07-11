@@ -110,7 +110,7 @@
   when: checkout_type | trim == 'https'
 
 - name: Set current playbook folder
-  set_facts:
+  set_fact:
      playbook_folder: "{{ playbook_dir }}/.."
 
 - name: Copy current folder into playbooks folder
