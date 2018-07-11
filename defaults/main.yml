@@ -8,9 +8,10 @@ configurations_folder: "{{ target_ansible_workspace }}/multi-planet-configuratio
 target_apigee_workspace: "{{ apigee_workspace | default(local_workspace) }}"
 ansible_config: "{{ target_apigee_workspace | default(ansible_workspace) }}/ansible.cfg"
 target_apigee_secure_folder: "{{ apigee_secure_folder | default(target_apigee_workspace) }}"
+target_apigee_custom_properties_folder: "{{ apigee_customer_properties_folder | default(target_apigee_workspace) }}"
 starter_templates:
-- { dest_path: "{{ target_apigee_secure_folder }}/apigee-secure", file_name: credentials.yml }
-- { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: custom-properties.yml }
+- { dest_path: "{{ target_apigee_secure_folder }}", file_name: credentials.yml }
+- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: custom-properties.yml }
 setup_dirs:
 - "{{ configurations_folder }}"
 - "{{ target_ansible_workspace }}/roles"
