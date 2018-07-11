@@ -6,11 +6,7 @@
   yum:
     name: "{{ item }}"
     state: present
-  with_items:
-  - git
-  - rsync
-  - tree
-  - ansible
+  with_items: "{{ os_packages }}"
   when: ansible_os_family == 'Redhat'
 
 - name: Install system packages - apt
@@ -19,11 +15,7 @@
   apt:
     name: "{{ item }}"
     state: present
-  with_items:
-  - git
-  - rsync
-  - tree
-  - ansible
+  with_items: "{{ os_packages }}"
   when: ansible_os_family == 'Debian'
 
 - name: Clean all folders

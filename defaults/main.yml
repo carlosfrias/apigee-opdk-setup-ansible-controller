@@ -30,3 +30,9 @@ checkout_type: https
 template_repos:
 - { dir: '{{ configurations_folder }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
 - { dir: "{{ target_ansible_workspace }}/inventory", repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }
+
+os_packages:
+- git
+- rsync
+- tree
+- ansible
