@@ -2,7 +2,7 @@
 remote_user = {{ remote_user }}
 private_key_file = {{ private_key_file }}
 
-#hostfile = {{ target_ansible_workspace }}/inventory
+inventory = {{ target_ansible_workspace }}/inventory
 fact_caching_connection = {{ target_ansible_workspace }}/tmp
 log_path = {{ target_ansible_workspace }}/logs/ansible.log
 roles_path = {{ target_ansible_workspace }}/roles
