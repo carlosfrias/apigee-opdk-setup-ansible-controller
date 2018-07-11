@@ -44,10 +44,10 @@
   with_items:
   - "{{ setup_dirs }}"
 
-- name: Update Library
-  synchronize:
-    src: library
-    dest: "{{ target_ansible_workspace }}/"
+#- name: Update Library
+#  synchronize:
+#    src: library
+#    dest: "{{ target_ansible_workspace }}/"
 
 - name: Update pip.conf
   tags: ['pip']
@@ -82,6 +82,7 @@
   copy:
     src: "{{ item.file_name }}"
     dest: "{{ item.dest_path }}/{{ item.file_name }}"
+    force: no
   with_items: "{{ starter_templates }}"
 
 - name: Update Ansible cache
