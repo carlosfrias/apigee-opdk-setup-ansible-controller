@@ -18,6 +18,9 @@
   with_items: "{{ os_packages }}"
   when: ansible_os_family == 'Debian'
 
+- debug:
+    vars: target_ansible_workspace
+
 - name: Clean all folders
   tags: ['clean']
   file:
