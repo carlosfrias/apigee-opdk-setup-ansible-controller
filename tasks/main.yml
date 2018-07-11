@@ -111,7 +111,7 @@
 
 - name: Copy current folder into playbooks folder
   synchronize:
-    src: "{{ playbook_dir }}"
+    src: "{{ playbook_dir | relpath('..') }}"
     dest: "{{ target_apigee_workspace }}/playbooks"
 
 
