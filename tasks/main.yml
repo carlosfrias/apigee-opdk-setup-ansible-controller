@@ -1,6 +1,6 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
-- name: Install system packages
+- name: Install system packages - yum
   tags: ['os']
   yum:
     name: "{{ item }}"
@@ -10,6 +10,19 @@
   - rsync
   - tree
   - ansible
+  when: ansible_os_family == 'Redhat'
+
+- name: Install system packages - apt
+  tags: ['os']
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - git
+  - rsync
+  - tree
+  - ansible
+  when: ansible_os_family == 'Debian'
 
 - name: Clean all folders
   tags: ['clean']
