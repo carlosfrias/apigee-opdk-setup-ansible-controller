@@ -1,13 +1,12 @@
 ---
 # defaults file for apigee-opdk-setup-ansible
-local_workspace: "~/apigee-workspace/ansible"
-ansible_config_folder: "{{ ansible_workspace | default('~/apigee-workspace') }}"
-ansible_config: "{{ ansible_workspace | default(ansible_config_folder) }}/ansible.cfg"
-target_ansible_workspace: "{{ ansible_workspace | default(local_workspace) }}"
-#inventory_folder: "{{ target_ansible_workspace }}/inventory"
+local_workspace: "~/apigee-workspace"
+ansible_config_folder: "{{ ansible_workspace | default(local_workspace) }}/ansible"
+target_ansible_workspace: "{{ ansible_workspace | default(ansible_config_folder) }}"
 library_folder: "{{ target_ansible_workspace }}/library"
 configurations_folder: "{{ target_ansible_workspace }}/multi-planet-configurations"
-target_apigee_workspace: "{{ apigee_workspace | default(target_ansible_workspace) }}"
+target_apigee_workspace: "{{ apigee_workspace | default(local_workspace) }}"
+ansible_config: "{{ ansible_workspace | default(target_apigee_workspace) }}/ansible.cfg"
 starter_templates:
 - { dest_path: "{{ target_apigee_workspace }}/apigee-secure", file_name: credentials.yml }
 - { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: custom-properties.yml }
