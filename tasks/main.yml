@@ -44,11 +44,6 @@
   with_items:
   - "{{ setup_dirs }}"
 
-#- name: Update Library
-#  synchronize:
-#    src: library
-#    dest: "{{ target_ansible_workspace }}/"
-
 - name: Update pip.conf
   tags: ['pip']
   template:
