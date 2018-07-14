@@ -1,5 +1,19 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
+- name: Load property
+  include_vars:
+    dir: "{{ item | expanduser }}"
+  with_items:
+  - "{{ apigee_secure_folder }}"
+  when: apigee_secure_folder is defined
+
+- name: Load property
+  include_vars:
+    dir: "{{ item | expanduser }}"
+  with_items:
+  - "{{ apigee_custom_properties_folder }}"
+  when: apigee_custom_properties_folder is defined
+
 - name: Install system packages - yum
   become: yes
   tags: ['os']
