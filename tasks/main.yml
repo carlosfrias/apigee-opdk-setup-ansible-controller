@@ -7,8 +7,8 @@
   with_items:
   - "{{ ansible_workspace }}"
   - "{{ apigee_workspace }}"
-  - "{{ apigee_secure_folder }}"
-  - "{{ apigee_custom_properties_folder }}"
+  - "{{ target_apigee_secure_folder }}"
+  - "{{ target_apigee_custom_properties_folder }}"
 
 - name: Load property
   include_vars:
