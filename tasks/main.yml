@@ -1,5 +1,15 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
+- name: Ensure folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+  - "{{ ansible_workspace }}"
+  - "{{ apigee_workspace }}"
+  - "{{ apigee_secure_folder }}"
+  - "{{ apigee_custom_properties_folder }}"
+
 - name: Load property
   include_vars:
     dir: "{{ item | expanduser }}"
