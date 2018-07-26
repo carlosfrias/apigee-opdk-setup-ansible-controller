@@ -15,14 +15,14 @@
   include_vars:
     dir: "{{ item | expanduser }}"
   with_items:
-  - "{{ apigee_secure_folder }}"
+  - "{{ target_apigee_secure_folder }}"
   when: apigee_secure_folder is defined
 
 - name: Load property
   include_vars:
     dir: "{{ item | expanduser }}"
   with_items:
-  - "{{ apigee_custom_properties_folder }}"
+  - "{{ target_apigee_custom_properties_folder }}"
   when: apigee_custom_properties_folder is defined
 
 - name: Install system packages - yum
