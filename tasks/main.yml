@@ -42,9 +42,6 @@
   with_items: "{{ os_packages }}"
   when: ansible_os_family == 'Debian'
 
-- debug:
-    var: target_ansible_workspace
-
 - name: Clean all folders
   tags: ['clean']
   file:
@@ -142,6 +139,6 @@
 - name: Copy current folder into playbooks folder
   synchronize:
     src: "{{ playbook_folder }}"
-    dest: "{{ target_apigee_workspace }}/playbooks/{{ playbook_dir | basename }}"
+    dest: "{{ target_apigee_workspace }}/playbooks/"
 
 
