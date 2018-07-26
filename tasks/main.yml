@@ -58,7 +58,7 @@
     state: directory
   with_items: "{{ setup_dirs }}"
 
-- name: Setting up Ansible in this directory
+- name: Setting up Ansible working directory
   file:
     path: "{{ item }}"
     state: directory
