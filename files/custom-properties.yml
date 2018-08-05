@@ -5,6 +5,7 @@ opdk_version: 4.18.01
 # Location of folder on controller server that contains downloaded logs
 target_logs_folder: "~/.apigee/planet_resources/"
 
+enable_system_check: n
 
 assign_mgmt_ip: True
 
@@ -40,6 +41,7 @@ opdk_license_target_file_path: /tmp/edge/license.conf
 # Used for proxy settings when required
 # http_proxy: http://proxy.com:80
 # https_proxy: https://proxy.com:80
+# no_proxy: 127.0.0.1
 
 # Used to temporarily move and restore system files in order to enable installation of components.
 # temporary_move:
