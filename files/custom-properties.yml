@@ -5,12 +5,21 @@ opdk_version: 4.18.01
 # Location of folder on controller server that contains downloaded logs
 target_logs_folder: "~/.apigee/planet_resources/"
 
+# Enable setup scripts to check system compliance to Apigee requirements.
 enable_system_check: n
 
-assign_mgmt_ip: True
+
+# assign_mgmt_ip: True
+
+
+# Apigee group is created by default unless this is set to False
+# opdk_group_create: False
 
 # Variable to indicate the previous OPDK version to upgrade from
 # upgrade_from_opdk_version: 4.17.01
+
+# Apigee release version used with bootstrap.
+apigeereleasever: 4.17.09
 
 # Address and location of the Apigee Mirror web server
 # apigee_repo_uri: 10.142.0.4:3939
@@ -142,8 +151,6 @@ openldap_named_packages:
 - "{{ openldap_named_repo_hosts}}/openldap-clients-{{ openldap_legacy_version }}-16.el6.x86_64.rpm"
 - "{{ openldap_named_repo_hosts}}/openldap-servers-{{ openldap_legacy_version }}-16.el6.x86_64.rpm"
 
-opdk_group_create: True
-
 # Use this to remove additional files that should be removed don't delete through on rollback
 #remove_on_rollback:
 #- {path to files or directories that should be removed on rollback }
@@ -156,14 +163,27 @@ opdk_group_create: True
 use_opdk_ldap_remote_host: n
 
 # If connecting to remote OpenLDAP server, specify the IP/DNS name and port.
-# opdk_ldap_host:       # IP or DNS name of OpenLDAP node.
-# opdk_ldap_port: 10389  # Default is 10389.
+#opdk_ldap_host:       # IP or DNS name of OpenLDAP node.
+#opdk_ldap_port: 10389  # Default is 10389.
 
 # Specify OpenLDAP without replication, 1, or with replication, 2.
 opdk_ldap_type: 1
 
 # Organization name
-# org_name:
+#org_name: opdk
+
+# Environment name
+#env_name: test
+
+# This collections allows you to add multiple orgs and environments
+tenants:
+- { org: opdk, env: dev, new_user: 'y' }
+- { org: opdk, env: test, new_user: 'y' }
+#- { org: opdk, env: prod, new_user: 'y' }
+
+# Modify timeouts and wait times for Apigee Service scripts
+#port_timeout: 600
+#up_timeout: 600
 
 # OS Config for all Nodes
 clear_etc_hosts:
