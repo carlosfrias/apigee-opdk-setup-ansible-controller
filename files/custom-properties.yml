@@ -1,6 +1,6 @@
 ---
 # Version of Apigee Private Cloud to install
-opdk_version: 4.18.01
+opdk_version: 4.18.05
 
 # Location of folder on controller server that contains downloaded logs
 target_logs_folder: "~/.apigee/planet_resources/"
