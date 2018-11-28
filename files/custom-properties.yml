@@ -19,7 +19,7 @@ enable_system_check: n
 # upgrade_from_opdk_version: 4.17.01
 
 # Apigee release version used with bootstrap.
-apigeereleasever: 4.17.09
+apigeereleasever: 4.18.05
 
 # Address and location of the Apigee Mirror web server
 # apigee_repo_uri: 10.142.0.4:3939
