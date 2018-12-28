@@ -16,7 +16,7 @@ configurations_folder: "{{ target_ansible_workspace }}/multi-planet-configuratio
 
 target_apigee_workspace: "{{ apigee_workspace | default(local_workspace) }}"
 
-ansible_config: "{{ target_apigee_workspace | default('~') }}/.ansible.cfg"
+default_ansible_config: "~/.ansible.cfg"
 
 target_apigee_secure_folder: "{{ apigee_secure_folder | default(target_apigee_workspace) }}"
 

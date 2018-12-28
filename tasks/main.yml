@@ -81,11 +81,11 @@
       - remote_user is defined
     msg: "Please provide the remote user name: -e remote_user=<remote username>"
 
-- name: Update ansible.cfg file
+- name: Create a default ansible.cfg file
   tags: ['config']
   template:
     src: ansible.cfg.j2
-    dest: "{{ ansible_config }}"
+    dest: "{{ default_ansible_config }}"
     backup: yes
     force: yes
 
