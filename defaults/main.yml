@@ -34,8 +34,8 @@ setup_dirs:
 - "{{ target_apigee_workspace }}/playbooks"
 - "{{ target_ansible_workspace }}/inventory"
 
-pip_config:
-- { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: pip.conf }
+#pip_config:
+#- { dest_path: "{{ target_apigee_workspace }}/apigee", file_name: pip.conf }
 
 private_key_file: ~/.ssh/id_rsa
 
