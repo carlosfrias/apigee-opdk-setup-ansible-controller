@@ -48,7 +48,7 @@ checkout_type: https
 template_repos:
 - { dir: '{{ target_ansible_configurations }}', repo_name: apigee-opdk-ansible-configuration-samples, dest_name: templates }
 - { dir: "{{ target_ansible_workspace }}/inventory", repo_name: apigee-opdk-ansible-inventory-samples, dest_name: templates }
-- { dir: "{{ target_apigee_workspace }}/playbooks", repo_name: apigee-opdk-playbook-installation-single-region, dest_name: installations }
+- { dir: "{{ target_apigee_workspace }}/playbooks", repo_name: apigee-opdk-playbook-setup-ansible, dest_name: apigee-opdk-playbook-installations }
 
 os_packages:
 - git
