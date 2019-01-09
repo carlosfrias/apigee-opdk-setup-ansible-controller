@@ -1,15 +1,5 @@
 ---
 # tasks file for apigee-opdk-setup-ansible
-- name: Ensure folders exists
-  file:
-    path: "{{ item | expanduser }}"
-    state: directory
-  with_items:
-  - "{{ ansible_workspace }}"
-  - "{{ apigee_workspace }}"
-  - "{{ target_apigee_secure_folder }}"
-  - "{{ target_apigee_custom_properties_folder }}"
-
 - name: Install system packages - yum
   become: yes
   tags: ['os']
@@ -44,12 +34,12 @@
     state: directory
   with_items: "{{ setup_dirs }}"
 
-- name: Setting up Ansible working directory
-  file:
-    path: "{{ item }}"
-    state: directory
-  with_items:
-  - "{{ setup_dirs }}"
+#- name: Setting up Ansible working directory
+#  file:
+#    path: "{{ item }}"
+#    state: directory
+#  with_items:
+#  - "{{ setup_dirs }}"
 
 #- name: Update pip.conf
 #  tags: ['pip']
