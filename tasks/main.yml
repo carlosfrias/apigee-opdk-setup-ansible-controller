@@ -23,10 +23,7 @@
   file:
     path: "{{ item }}"
     state: absent
-  with_items:
-  - "{{ target_ansible_workspace }}/logs"
-  - "{{ target_ansible_workspace }}/roles"
-  - "{{ target_ansible_workspace }}/tmp"
+  with_items: "{{ clean_folders }}"
 
 - name: Recreate folders
   file:
@@ -48,21 +45,21 @@
 #    dest: "{{ item.dest_path }}/{{ item.file_name }}"
 #  with_items: "{{ pip_conf }}"
 #  when: pip_index_url is defined
+#
+#- name: Check for remote user name
+#  tags: ['config']
+#  assert:
+#    that:
+#      - remote_user is defined
+#    msg: "Please provide the remote user name: -e remote_user=<remote username>"
 
-- name: Check for remote user name
-  tags: ['config']
-  assert:
-    that:
-      - remote_user is defined
-    msg: "Please provide the remote user name: -e remote_user=<remote username>"
-
-- name: Create a default ansible.cfg file
-  tags: ['config']
-  template:
-    src: ansible.cfg.j2
-    dest: "{{ default_ansible_config }}"
-    backup: yes
-    force: yes
+#- name: Create a default ansible.cfg file
+#  tags: ['config']
+#  template:
+#    src: ansible.cfg.j2
+#    dest: "{{ default_ansible_config }}"
+#    backup: yes
+#    force: yes
 
 - name: Create starter template folders
   file:
