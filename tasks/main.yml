@@ -84,7 +84,6 @@
     value: "{{ item.value }}"
   with_items:
   - { key: 'ansible_workspace', value: '{{ target_ansible_workspace }}' }
-  - { key: 'apigee_workspace', value: '{{ target_apigee_workspace }}' }
   - { key: 'apigee_secure_folder', value: '{{ target_apigee_secure_folder }}' }
   - { key: 'apigee_custom_properties_folder', value: '{{ target_apigee_custom_properties_folder }}' }
 
