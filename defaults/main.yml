@@ -2,7 +2,7 @@
 # defaults file for apigee-opdk-setup-ansible
 
 # Default local Apigee Workspace
-local_workspace: "~/apigee-workspace"
+local_workspace: "~/.apigee-workspace"
 
 # Default Ansible workspace, used if not provided.
 ansible_config_folder: "{{ local_workspace }}/ansible"

@@ -3,7 +3,7 @@ Apigee OPDK Setup Ansible Controller
 
 This role will setup an Ansible controller with a common directory structure. The structure will
 produced at the path indicated by `ansible_workspace` and `apigee_workspace`. Plaase note that
-the default path is `~/apigee-workspace` as indicated in the Role Variables below. The following 
+the default path is `~/.apigee-workspace` as indicated in the Role Variables below. The following 
 structure will be produced: 
 
     apigee-workspace/
@@ -62,8 +62,8 @@ A description of the variables for this role can be found below:
 | Variable | Description |
 | --- | --- |
 | remote_user | This variable indicates the remote user that Ansible will be configured to use in the ansible.cfg. There is no default possible for the `remote_user`.  | 
-| ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to `~/apigee-workspace`. |
-| apigee_workspace | This variable indicates the path to the apigee configuration files. The variable defaults to '~/apigee-workspace`. |
+| ansible_workspace | This variable indicates the path where Ansible working files should be installed. The variable defaults to `~/.apigee-workspace`. |
+| apigee_workspace | This variable indicates the path to the apigee configuration files. The variable defaults to '~/.apigee-workspace`. |
 | ansible_config | This variable indicates the location of the generated ansible.cfg |
 | local_workspace | This variable populates the default value if `ansible_workspace` is not provided |
 | setup_dirs | This collection provides the standard list of folders created in the `ansible_workspace` |
