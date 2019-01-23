@@ -8,9 +8,7 @@ target_logs_folder: "~/.apigee/planet_resources/"
 # Enable setup scripts to check system compliance to Apigee requirements.
 enable_system_check: n
 
-
 # assign_mgmt_ip: True
-
 
 # Apigee group is created by default unless this is set to False
 # opdk_group_create: False
