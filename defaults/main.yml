@@ -46,6 +46,7 @@ clean_folders:
 - "{{ target_ansible_workspace }}/logs"
 - "{{ target_ansible_workspace }}/roles"
 - "{{ target_ansible_workspace }}/tmp"
+- "{{ target_ansible_workspace }}/cache"
 
 # Location of the ssh key to include in the default .ansible.cfg file
 #private_key_file: ~/.ssh/id_rsa
