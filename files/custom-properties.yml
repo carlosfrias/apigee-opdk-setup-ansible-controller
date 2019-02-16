@@ -167,12 +167,6 @@ use_opdk_ldap_remote_host: n
 # Specify OpenLDAP without replication, 1, or with replication, 2.
 opdk_ldap_type: 1
 
-# Organization name
-#org_name: opdk
-
-# Environment name
-#env_name: test
-
 # This collections allows you to add multiple orgs and environments
 tenants:
 - { org: opdk, env: dev, new_user: 'y' }
@@ -203,11 +197,22 @@ apigee_kernel_sem: '500 32000 32 1024'
 sysctl_pg:
 - { name: 'kernel.sem', value: "{{ apigee_kernel_sem }}" }
 
+# Apigee Archive File Name
+apigee_archive_file_name: "-{{ opdk_version }}.tar.gz"
+
 # Extra Yum Packages that should be transferred manually for an offline installation
 archive_extra_packages:
 - yum-utils
 - yum-plugin-priorities
 - libdb4-4.8*
+- java-1.8.0-openjdk.x86_64
+- qpid-cpp-server
+- qpid-cpp-server-linearstore
+- qpid-tools
+- qpid-qmf
+- python-qpid
+- qpid-cpp-client
+- qpid-proton-c
 
 # apigee_limits is used to set the limits.conf for the node where OPDK components are installed.
 apigee_limits:
@@ -265,6 +270,8 @@ sso_saml_idpmetaurl_skipsslvalidation: n
 sso_profile: "saml"
 sso_tomcat_port: 9099
 sso_tomcat_profile: DEFAULT
+
+# Pattern for selecting logs and configuration files to download from Planet nodes to control server.
 pattern:
 - { dir: '/etc/', pattern: 'hosts*' }
 - { dir: '/etc/', pattern: 'environment' }
