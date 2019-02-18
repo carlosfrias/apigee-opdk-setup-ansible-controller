@@ -198,7 +198,7 @@ sysctl_pg:
 - { name: 'kernel.sem', value: "{{ apigee_kernel_sem }}" }
 
 # Apigee Archive File Name
-apigee_archive_file_name: "-{{ opdk_version }}.tar.gz"
+#apigee_archive_file_name: "apigee-{{ opdk_version }}.tar.gz"
 
 # Extra Yum Packages that should be transferred manually for an offline installation
 archive_extra_packages:
