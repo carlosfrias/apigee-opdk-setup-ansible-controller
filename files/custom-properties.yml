@@ -213,6 +213,19 @@ archive_extra_packages:
 - python-qpid
 - qpid-cpp-client
 - qpid-proton-c
+- apigee-cassandra
+- apigee-zookeeper
+- apigee-openldap
+- apigee-qpidd
+- apigee-postgresql
+- edge-management-server
+- edge-ui
+- edge-router
+- edge-message-processor
+- edge-qpid-server
+- edge-postgres-server
+- apigee-drupal
+- apigee-drupal-devportal
 
 # apigee_limits is used to set the limits.conf for the node where OPDK components are installed.
 apigee_limits:
