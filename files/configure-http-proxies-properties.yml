@@ -1,0 +1,6 @@
+---
+
+# Used for proxy settings when required
+# http_proxy: http://proxy.com:80
+# https_proxy: https://proxy.com:80
+# no_proxy: 127.0.0.1

@@ -1,0 +1,7 @@
+---
+
+# This collections allows you to add multiple orgs and environments
+tenants:
+  - { org: opdk, env: dev, new_user: 'y' }
+  - { org: opdk, env: test, new_user: 'y' }
+#- { org: opdk, env: prod, new_user: 'y' }
