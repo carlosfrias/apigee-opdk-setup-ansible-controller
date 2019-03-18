@@ -63,7 +63,7 @@
 
 - name: Create starter template folders
   file:
-    path: "{{ item.dest_path }}"
+    path: "{{ item }}"
     state: directory
   with_items:
     - "{{ target_apigee_custom_properties_folder }}"
