@@ -25,22 +25,23 @@ target_apigee_secure_folder: "{{ apigee_secure_folder }}"
 # Ansible folder in which to place a template for custome properties.
 target_apigee_custom_properties_folder: "{{ apigee_custom_properties_folder }}"
 
-# Starter templates to help user start configurations
-starter_templates:
-- { dest_path: "{{ target_apigee_secure_folder }}", file_name: credentials.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: custom-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-mirror-archive-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-mirror-web-server-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-service-script-timeouts-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: configure-http-proxies-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: configure-yum-repos-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: download-logs-and-configs-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: epel-management-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: offline-installation-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: openldap-settings-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: os-system-settings-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: pip-config-properties.yml }
-- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: qpid-config-properties.yml }
+#
+## Starter templates to help user start configurations
+#starter_templates:
+#- { dest_path: "{{ target_apigee_secure_folder }}", file_name: credentials.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: custom-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-mirror-archive-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-mirror-web-server-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: apigee-service-script-timeouts-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: configure-http-proxies-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: configure-yum-repos-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: download-logs-and-configs-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: epel-management-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: offline-installation-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: openldap-settings-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: os-system-settings-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: pip-config-properties.yml }
+#- { dest_path: "{{ target_apigee_custom_properties_folder }}", file_name: qpid-config-properties.yml }
 
 # Folders that should be setup on file system
 setup_dirs:
