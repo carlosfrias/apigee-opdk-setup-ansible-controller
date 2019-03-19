@@ -1,4 +1,5 @@
 ---
-
 # Apigee Archive File Name
-#apigee_archive_file_name: "apigee-{{ opdk_version }}.tar.gz"
+#apigee_archive_name: "apigee-{{ apigeereleasever | default(opdk_version) }}"
+#apigee_archive_file_name: "apigee-{{ apigeereleasever | default(opdk_version) }}.tar.gz"
+#apigeerepobasepath: '{{ apigee_home }}/data/apigee-mirror'
