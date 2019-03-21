@@ -26,6 +26,7 @@
   with_items: "{{ clean_folders }}"
 
 - name: Recreate folders
+  tags: ['folders']
   file:
     path: '{{ item }}'
     state: directory
@@ -62,6 +63,7 @@
 #    force: yes
 
 - name: Create starter template folders
+  tags: ['folders']
   file:
     path: "{{ item }}"
     state: directory
