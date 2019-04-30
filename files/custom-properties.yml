@@ -17,8 +17,14 @@ enable_system_check: n
 # Location from where to download Apigee Private Cloud binaries
 apigee_repo_url: "http://software.apigee.com"
 
- # Location of the Apigee license file on the control server.
-opdk_license_source_file_name: ~/.apigee-secure/license.txt
-
- # Location of the Apigee license file on the target node.
+# Location of the Apigee license file on the target node.
 opdk_license_target_file_path: /tmp/edge/license.conf
+
+# Location of sensitive attributes
+local_apigee_secure_path: ~/.apigee-secure
+
+# Location of installation attributes
+local_apigee_path: ~/.apigee
+
+# Location of the Apigee license file on the control server.
+opdk_license_source_file_name: "{{ local_apigee_secure_path }}/license.txt"
