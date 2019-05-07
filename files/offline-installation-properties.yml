@@ -44,6 +44,7 @@ archive_extra_packages:
 - boost-filesystem
 - yum-utils
 - yum-plugin-priorities
+- https://rpmfind.net/linux/centos/7.6.1810/os/x86_64/Packages/yum-plugin-priorities-1.1.31-50.el7.noarch.rpm
 - libdb4-4.8
 - qpid-cpp-server
 - qpid-cpp-server-linearstore
