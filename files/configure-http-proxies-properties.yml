@@ -5,5 +5,5 @@
 # https_proxy: https://proxy.com:80
 # no_proxy: 127.0.0.1
 # yum_proxy:
-# yum_proxy_proxy_password:
-# yum_proxy_proxy_username:
+# yum_proxy_password:
+# yum_proxy_username:
