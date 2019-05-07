@@ -3,3 +3,4 @@
 #apigee_archive_name: "apigee-{{ apigeereleasever | default(opdk_version) }}"
 #apigee_archive_file_name: "apigee-{{ apigeereleasever | default(opdk_version) }}.tar.gz"
 #apigeerepobasepath: '{{ apigee_home }}/data/apigee-mirror'
+#install_archive_mirror: true
