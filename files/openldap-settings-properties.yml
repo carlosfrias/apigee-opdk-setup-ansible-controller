@@ -24,7 +24,7 @@ openldap_downgrade_version:
   - openldap-servers-2.4.40
 
 # OpenLdap RMP Download Locations if needed
-openldap_named_repo_host: http://mirror.centos.org/centos/6/os/x86_64/Packages
+openldap_named_repo_host: http://mirror.centos.org/centos/{{ ansible_distribution_major_version }}/os/x86_64/Packages
 openldap_named_legacy_version: 2.4.40
 openldap_named_packages:
   - "{{ openldap_named_repo_hosts}}/openldap-{{ openldap_legacy_version }}-16.el6.x86_64.rpm"
