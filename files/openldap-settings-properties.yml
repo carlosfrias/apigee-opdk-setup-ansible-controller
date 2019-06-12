@@ -1,7 +1,8 @@
 ---
 # Set to y if you are connecting to a remote LDAP server.
 # If n, Edge installs OpenLDAP when it installs the Management Server.
-use_opdk_ldap_remote_host: n
+# Default value is n
+#use_opdk_ldap_remote_host: n
 
 # If connecting to remote OpenLDAP server, specify the IP/DNS name and port.
 #opdk_ldap_host:       # IP or DNS name of OpenLDAP node.
