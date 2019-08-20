@@ -13,4 +13,6 @@
 #    exclude: '',
 #    repo_filename: "customer-provided",
 #    sslverify: false
+#    proxy: {{ https_proxy }}
+#    metalink: 'http://{some customer url and port}'
 #  }
