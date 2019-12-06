@@ -1,6 +1,6 @@
 ---
 # Version of Apigee Private Cloud to install
-opdk_version: 4.19.01
+opdk_version: 4.19.06
 
 # Apigee release version used with bootstrap.
 apigeereleasever: "{{ opdk_version }}"
