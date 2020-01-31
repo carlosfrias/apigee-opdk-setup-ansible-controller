@@ -1,8 +1,4 @@
 ---
-
-# Apigee staging installation folder
-opdk_resources_path: "/tmp/edge"
-
 # This collections allows you to add multiple orgs and environments
 tenants:
   - { org: opdk, env: test, new_user: 'y' }

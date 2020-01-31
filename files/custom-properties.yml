@@ -18,7 +18,7 @@ enable_system_check: n
 apigee_repo_url: "http://software.apigee.com"
 
 # Installation resources staging folder
-opdk_resources_path: /tmp/edge
+opdk_resources_path: /opt/apigee/customer/installation
 
 # Local resource location
 local_apigee_path: ~/.apigee
