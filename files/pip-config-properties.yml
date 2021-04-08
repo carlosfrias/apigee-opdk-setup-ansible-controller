@@ -6,7 +6,6 @@
 
 # Pip Packages for Ansible Scripts
 pip_packages:
-  - httplib2
   - passlib
   - urllib3
   - requests
