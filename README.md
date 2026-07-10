@@ -6,6 +6,8 @@
 ## What the role actually does
 
 1. **Installs OS packages** (`git`, `rsync`, `tree`, `ansible`) via `yum` (Red Hat) or `apt` (Debian).
+> [!NOTE]
+> Engineering portfolio note — this project demonstrates Ansible controller scaffolding for the Apigee OPDK framework. See the [skills assessment →](SKILLS-ASSESSMENT.md) for the expertise applied.
 2. **Creates the workspace directory tree** under `~/.apigee-workspace` (configurable via `ansible_workspace` / `apigee_workspace`):
 
    ```
