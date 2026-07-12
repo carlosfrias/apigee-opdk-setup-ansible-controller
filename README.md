@@ -5,6 +5,9 @@
 
 ## What the role actually does
 
+> 🔄 **Evolution note:** The automation approach from this OPDK-era role has been consolidated into the `apigee-hybrid-workspace` Ansible collection. See the successor capability in the portfolio hub: [`carlosfrias/apigee-hybrid-workspace`](https://github.com/carlosfrias/apigee-hybrid-workspace) → `bap_coe/private_cloud/` and `bap_coe/apigee_hybrid/`. The collection README explains each role group’s business value and production context.
+
+
 1. **Installs OS packages** (`git`, `rsync`, `tree`, `ansible`) via `yum` (Red Hat) or `apt` (Debian).
 > [!NOTE]
 > Engineering portfolio note — this project demonstrates Ansible controller scaffolding for the Apigee OPDK framework. See the [skills assessment →](SKILLS-ASSESSMENT.md) for the expertise applied.
